@@ -8,4 +8,11 @@ describe "Bookmarks" do
       response.status.should be(200)
     end
   end
+  describe "Form" do
+  	it "should exist" do
+	  visit '/bookmarks/new'
+	  expect(page).to have_content("New bookmark")	  
+	end
+  end
+  
 end
